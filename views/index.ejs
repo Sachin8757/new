@@ -47,6 +47,7 @@
             animation: float 5s infinite ease-in-out, spin 10s linear infinite;
             height: 250px;
             width: 280px;
+            display: none;  /* Initially hidden */
         }
 
         .rose {
@@ -167,11 +168,12 @@
             const rose = document.getElementById('floating-rose');
             const photo = document.getElementById('photo');
 
-            // Stop the animations for the heart and rose
-            heart.style.animation = "none";
+            // Stop the animations for the rose
             rose.style.animation = "none";
 
-            // Make the photo appear
+            // Make the heart and photo appear
+            heart.style.display = 'block';  // Make the heart visible
+            heart.style.animation = 'float 5s infinite ease-in-out, spin 10s linear infinite'; // Re-apply the float and spin animations
             photo.style.display = 'block';  // Make the photo visible
             photo.style.opacity = 1;  // Ensure it's fully visible
             photo.style.animation = 'zoomIn 2s forwards';  // Apply zoom-in animation
