@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Surprise 2025</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .message {
+            font-size: 2rem;
+            animation: fadeIn 2s ease-in-out forwards, bounce 4s infinite;
+            opacity: 0;
+        }
+
+        .message:nth-child(1) {
+            animation-delay: 1s, 0s;
+        }
+
+        .message:nth-child(2) {
+            animation-delay: 3s, 2s;
+        }
+
+        .message:nth-child(3) {
+            animation-delay: 5s, 4s;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: 5%;
+            animation: float 5s infinite ease-in-out, spin 10s linear infinite;
+            height: 250px;
+            width: 280px;
+        }
+
+        .rose {
+            position: absolute;
+            top: 5%;
+            left: 36%;
+            width: 120px;
+            animation: float 6s infinite ease-in-out alternate;
+        }
+
+        .photo {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            animation: zoomIn 2s forwards;
+            opacity: 0;  /* Initially hidden */
+            display: none;  /* Hide by default */
+            height: 219px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .button {
+            margin-top: 2rem;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #2a5298;
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: fadeIn 6s ease-in-out forwards, pulse 3s infinite;
+        }
+
+        .button:hover {
+            background: #2a5298;
+            color: #fff;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">Happy New Year 2025, My Love! 🎉</div>
+        <div class="message">You Make Every Moment Magical ✨</div>
+        <div class="message">Let’s Make This Year Unforgettable Together ❤️</div>
+        <button class="button" onclick="revealSurprise()">Click for Your Surprise</button>
+    </div>
+
+    <img src="/images/heart.png" alt="Heart" class="heart" id="floating-heart">
+    <img src="/images/rose.png" alt="Rose" class="rose" id="floating-rose">
+    <img src="/images/k.png" alt="Couple Photo" class="photo" id="photo">
+
+    <script>
+        function revealSurprise() {
+            // Change the message to show the surprise
+            const container = document.querySelector('.container');
+            container.innerHTML = `<h1 style="color: #FFD700; animation: zoomIn 2s forwards;">Happy New Year Devi jeee</h1>`;
+
+            // Get the heart, rose, and photo elements
+            const heart = document.getElementById('floating-heart');
+            const rose = document.getElementById('floating-rose');
+            const photo = document.getElementById('photo');
+
+            // Stop the animations for the heart and rose
+            heart.style.animation = "none";
+            rose.style.animation = "none";
+
+            // Make the photo appear
+            photo.style.display = 'block';  // Make the photo visible
+            photo.style.opacity = 1;  // Ensure it's fully visible
+            photo.style.animation = 'zoomIn 2s forwards';  // Apply zoom-in animation
+        }
+    </script>
+</body>
+</html>
